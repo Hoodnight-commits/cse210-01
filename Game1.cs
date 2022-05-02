@@ -1,11 +1,11 @@
-﻿// Game1 Jared Browner-Botson
+// Game1 Jared Browner-Botson
 class Program
     {
         public static char playerSignature = ' ';
 
         static int turns = 0;
 
-        static char[] ArrBoard = 
+        static char[] ArrangeBoard = 
         {
             '1', '2', '3', '4', '5', '6', '7', '8', '9'
         };
@@ -13,12 +13,12 @@ class Program
         
         public static void BoardReset()
         {
-            char[] ArrBoardInitialize = 
+            char[] SetBoard = 
             {
                 '1', '2', '3', '4', '5', '6', '7', '8', '9'
             };
 
-            ArrBoard = ArrBoardInitialize;
+            ArrangeBoard = SetBoard;
             DrawBoard();
             turns = 0;
         }
@@ -26,11 +26,11 @@ class Program
         public static void DrawBoard()
         {
             Console.Clear();
-            Console.WriteLine("{0}|{1}|{2}", ArrBoard[0], ArrBoard[1], ArrBoard[2]);
+            Console.WriteLine("{0}|{1}|{2}", ArrangeBoard[0], ArrangeBoard[1], ArrangeBoard[2]);
             Console.WriteLine("-+-+-");
-            Console.WriteLine("{0}|{1}|{2}", ArrBoard[3], ArrBoard[4], ArrBoard[5]);
+            Console.WriteLine("{0}|{1}|{2}", ArrangeBoard[3], ArrangeBoard[4], ArrangeBoard[5]);
             Console.WriteLine("-+-+-");
-            Console.WriteLine("{0}|{1}|{2}", ArrBoard[6], ArrBoard[7], ArrBoard[8]);
+            Console.WriteLine("{0}|{1}|{2}", ArrangeBoard[6], ArrangeBoard[7], ArrangeBoard[8]);
         }
 
         static void Main(string[] args)
@@ -76,23 +76,23 @@ class Program
                         Console.WriteLine("Press number (1-9)");
                     }
 
-                    if ((input == 1) && (ArrBoard[0] == '1'))
+                    if ((input == 1) && (ArrangeBoard[0] == '1'))
                         inputCorrect = true;
-                    else if ((input == 2) && (ArrBoard[1] == '2'))
+                    else if ((input == 2) && (ArrangeBoard[1] == '2'))
                         inputCorrect = true;
-                    else if ((input == 3) && (ArrBoard[2] == '3'))
+                    else if ((input == 3) && (ArrangeBoard[2] == '3'))
                         inputCorrect = true;
-                    else if ((input == 4) && (ArrBoard[3] == '4'))
+                    else if ((input == 4) && (ArrangeBoard[3] == '4'))
                         inputCorrect = true;
-                    else if ((input == 5) && (ArrBoard[4] == '5'))
+                    else if ((input == 5) && (ArrangeBoard[4] == '5'))
                         inputCorrect = true;
-                    else if ((input == 6) && (ArrBoard[5] == '6'))
+                    else if ((input == 6) && (ArrangeBoard[5] == '6'))
                         inputCorrect = true;
-                    else if ((input == 7) && (ArrBoard[6] == '7'))
+                    else if ((input == 7) && (ArrangeBoard[6] == '7'))
                         inputCorrect = true;
-                    else if ((input == 8) && (ArrBoard[7] == '8'))
+                    else if ((input == 8) && (ArrangeBoard[7] == '8'))
                         inputCorrect = true;
-                    else if ((input == 9) && (ArrBoard[8] == '9'))
+                    else if ((input == 9) && (ArrangeBoard[8] == '9'))
                         inputCorrect = true;
                     else
                     {
@@ -111,15 +111,15 @@ class Program
 
             switch (input)
             {
-                case 1: ArrBoard[0] = playerSignature; break;
-                case 2: ArrBoard[1] = playerSignature; break;
-                case 3: ArrBoard[2] = playerSignature; break;
-                case 4: ArrBoard[3] = playerSignature; break;
-                case 5: ArrBoard[4] = playerSignature; break;
-                case 6: ArrBoard[5] = playerSignature; break;
-                case 7: ArrBoard[6] = playerSignature; break;
-                case 8: ArrBoard[7] = playerSignature; break;
-                case 9: ArrBoard[8] = playerSignature; break;
+                case 1: ArrangeBoard[0] = playerSignature; break;
+                case 2: ArrangeBoard[1] = playerSignature; break;
+                case 3: ArrangeBoard[2] = playerSignature; break;
+                case 4: ArrangeBoard[3] = playerSignature; break;
+                case 5: ArrangeBoard[4] = playerSignature; break;
+                case 6: ArrangeBoard[5] = playerSignature; break;
+                case 7: ArrangeBoard[6] = playerSignature; break;
+                case 8: ArrangeBoard[7] = playerSignature; break;
+                case 9: ArrangeBoard[8] = playerSignature; break;
             }
         }
 
@@ -129,9 +129,9 @@ class Program
 
             foreach (char playerSignature in playerSignatures)
             {
-                if (   ((ArrBoard[0] == playerSignature) && (ArrBoard[1] == playerSignature) && (ArrBoard[2] == playerSignature))
-                    || ((ArrBoard[3] == playerSignature) && (ArrBoard[4] == playerSignature) && (ArrBoard[5] == playerSignature))
-                    || ((ArrBoard[6] == playerSignature) && (ArrBoard[7] == playerSignature) && (ArrBoard[8] == playerSignature)))
+                if (   ((ArrangeBoard[0] == playerSignature) && (ArrangeBoard[1] == playerSignature) && (ArrangeBoard[2] == playerSignature))
+                    || ((ArrangeBoard[3] == playerSignature) && (ArrangeBoard[4] == playerSignature) && (ArrangeBoard[5] == playerSignature))
+                    || ((ArrangeBoard[6] == playerSignature) && (ArrangeBoard[7] == playerSignature) && (ArrangeBoard[8] == playerSignature)))
                 {
                     Console.Clear();
                     if (playerSignature == 'X')
@@ -158,9 +158,9 @@ class Program
 
             foreach (char playerSignature in playerSignatures)
             {
-                if (   ((ArrBoard[0] == playerSignature) && (ArrBoard[3] == playerSignature) && (ArrBoard[6] == playerSignature))
-                    || ((ArrBoard[1] == playerSignature) && (ArrBoard[4] == playerSignature) && (ArrBoard[7] == playerSignature))
-                    || ((ArrBoard[2] == playerSignature) && (ArrBoard[5] == playerSignature) && (ArrBoard[8] == playerSignature)))
+                if (   ((ArrangeBoard[0] == playerSignature) && (ArrangeBoard[3] == playerSignature) && (ArrangeBoard[6] == playerSignature))
+                    || ((ArrangeBoard[1] == playerSignature) && (ArrangeBoard[4] == playerSignature) && (ArrangeBoard[7] == playerSignature))
+                    || ((ArrangeBoard[2] == playerSignature) && (ArrangeBoard[5] == playerSignature) && (ArrangeBoard[8] == playerSignature)))
                 {
                     Console.Clear();
                     if (playerSignature == 'X')
@@ -189,8 +189,8 @@ class Program
 
             foreach (char playerSignature in playerSignatures)
             {
-                if (   ((ArrBoard[0] == playerSignature) && (ArrBoard[4] == playerSignature) && (ArrBoard[8] == playerSignature))
-                    || ((ArrBoard[6] == playerSignature) && (ArrBoard[4] == playerSignature) && (ArrBoard[2] == playerSignature)))
+                if (   ((ArrangeBoard[0] == playerSignature) && (ArrangeBoard[4] == playerSignature) && (ArrangeBoard[8] == playerSignature))
+                    || ((ArrangeBoard[6] == playerSignature) && (ArrangeBoard[4] == playerSignature) && (ArrangeBoard[2] == playerSignature)))
                     
                 {
                     Console.Clear();
