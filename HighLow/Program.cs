@@ -1,4 +1,6 @@
-﻿using System;
+//Jared Browner-Botson
+
+using System;
 
 namespace HighLow
 {
